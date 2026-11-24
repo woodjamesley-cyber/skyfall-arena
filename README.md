@@ -4,6 +4,12 @@ An original, fully playable 3D battle royale inspired by the genre — built fro
 
 **Playable in the browser and downloadable as a real Android APK.**
 
+## Download the Android APK
+
+[Download Skyfall Arena v1.0.0 for Android](https://github.com/woodjamesley-cyber/skyfall-arena/releases/download/v1.0.0/app-release.apk) — 3.2 MB, Android 7.0+ (API 24), signed release build.
+
+Sideload it by opening the download on your phone and allowing installs from your browser or file manager. Landscape orientation, immersive full screen.
+
 ---
 
 ## What is in the game
@@ -78,7 +84,7 @@ account system and no remote game server.
 
 ## Build the Android APK
 
-Requirements: Node 20+, JDK 17, Android SDK (platform 36, build-tools 36).
+Requirements: Node 20+, JDK 21, Android SDK (platform 36, build-tools 36).
 
 ```bash
 npm install
@@ -103,9 +109,9 @@ The release build reads `SKYFALL_KEYSTORE`, `SKYFALL_KEYSTORE_PASSWORD`,
 ### Continuous integration
 
 `.github/workflows/android.yml` builds, verifies and uploads the APK on every push to
-`main`/`master`, and attaches it to a GitHub Release when a `v*` tag is pushed. Add a
-`SKYFALL_KEYSTORE_BASE64` repository secret to sign with your own key; otherwise CI
-generates an ephemeral development key.
+`main`/`master`, and attaches it to a GitHub Release when a `v*` tag is pushed or the
+workflow is dispatched with `release: true`. Add a `SKYFALL_KEYSTORE_BASE64` repository
+secret to sign with your own key; otherwise CI generates an ephemeral development key.
 
 ### Android configuration
 
