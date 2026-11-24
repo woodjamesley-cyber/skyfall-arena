@@ -68,6 +68,8 @@ jobs:
       - name: Create signing keystore
         env:
           KEYSTORE_BASE64: ${{ secrets.SKYFALL_KEYSTORE_BASE64 }}
+          SKYFALL_KEYSTORE_PASSWORD: skyfall-dev-password
+          SKYFALL_KEY_PASSWORD: skyfall-dev-password
         run: |
           mkdir -p android
           if [ -n "$KEYSTORE_BASE64" ]; then
