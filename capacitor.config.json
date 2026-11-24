@@ -1,0 +1,13 @@
+{
+  "appId": "com.skyfall.arena",
+  "appName": "Skyfall Arena",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": false,
+    "backgroundColor": "#070b12",
+    "webContentsDebuggingEnabled": false
+  },
+  "server": {
+    "androidScheme": "https"
+  }
+}
